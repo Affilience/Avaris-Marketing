@@ -1,8 +1,8 @@
 'use client';
 
-import type { Metadata } from "next";
 import Link from "next/link";
 import { motion } from "framer-motion";
+import EnhancedHero from "../components/EnhancedHero";
 
 export default function Services() {
   const services = [
@@ -82,13 +82,8 @@ export default function Services() {
 
   return (
     <div className="min-h-screen">
-      <section className="relative bg-forest text-fence py-32 px-4 sm:px-6 lg:px-8 overflow-hidden">
-        <div className="absolute inset-0 opacity-10">
-          <div className="absolute top-20 right-20 w-96 h-96 bg-ash rounded-full blur-3xl"></div>
-          <div className="absolute bottom-20 left-20 w-72 h-72 bg-light rounded-full blur-3xl"></div>
-        </div>
-
-        <div className="max-w-4xl mx-auto text-center relative z-10">
+      <EnhancedHero>
+        <div className="text-center">
           <motion.h1
             className="text-6xl md:text-7xl font-bold mb-6"
             initial={{ opacity: 0, y: 30 }}
@@ -106,7 +101,7 @@ export default function Services() {
             Comprehensive solutions to bring your digital vision to life
           </motion.p>
         </div>
-      </section>
+      </EnhancedHero>
 
       <section className="py-24 px-4 sm:px-6 lg:px-8 bg-fence">
         <div className="max-w-7xl mx-auto">

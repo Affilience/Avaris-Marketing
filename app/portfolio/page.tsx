@@ -1,67 +1,36 @@
 'use client';
 
-import type { Metadata } from "next";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { useState } from "react";
+import EnhancedHero from "../components/EnhancedHero";
 
 export default function Portfolio() {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
 
   const projects = [
     {
-      title: "E-Commerce Platform",
-      category: "Online Retail",
-      description: "Full-featured online store with optimized checkout flow, secure payment processing, and inventory management. Built for speed and conversion with mobile-first design principles.",
-      tags: ["Next.js", "Payment Integration", "Responsive Design"],
-      gradient: "from-forest via-forest/80 to-ash"
+      title: "Elevate Safety Solutions",
+      category: "Fire Safety Consultancy",
+      description: "Professional fire safety consultancy website for a UK-based company. Features comprehensive service information, expert consultancy details, and streamlined contact forms to help businesses ensure fire safety compliance.",
+      tags: ["Responsive Design", "SEO Optimized", "Professional Services"],
+      image: "/elevate-safety.jpg",
+      url: "https://www.elevatesafetysolutions.co.uk/"
     },
     {
-      title: "Professional Services Website",
-      category: "Corporate",
-      description: "Clean, modern business website with service showcases, client testimonials, and lead generation forms. Optimized for search engines and designed to build credibility.",
-      tags: ["React", "CMS", "SEO Optimized"],
-      gradient: "from-ash via-light to-forest"
-    },
-    {
-      title: "Reservation & Booking Platform",
-      category: "Hospitality",
-      description: "Custom booking system with real-time availability, automated confirmations, and customer management dashboard. Streamlines operations and improves guest experience.",
-      tags: ["Full-Stack", "Database", "API Integration"],
-      gradient: "from-light via-ash/80 to-forest"
-    },
-    {
-      title: "Visual Portfolio Website",
-      category: "Creative Professional",
-      description: "Image-focused portfolio site with smooth animations, lightbox galleries, and project case studies. Fast-loading despite rich media content.",
-      tags: ["Performance", "Animation", "Mobile Responsive"],
-      gradient: "from-forest/90 via-ash to-light"
-    },
-    {
-      title: "SaaS Product Landing Page",
-      category: "Technology",
-      description: "Conversion-optimized landing page with clear value propositions, social proof, and strategic CTAs. Integrated with analytics for continuous improvement.",
-      tags: ["Conversion Focused", "Analytics", "A/B Testing"],
-      gradient: "from-ash via-forest/70 to-light"
-    },
-    {
-      title: "Non-Profit Organization Site",
-      category: "Non-Profit",
-      description: "Mission-driven website with donation processing, volunteer sign-up forms, and impact storytelling. Built with accessibility standards in mind.",
-      tags: ["Accessibility", "Donation Gateway", "Content Management"],
-      gradient: "from-light via-forest/80 to-ash"
+      title: "Aurix Recovery",
+      category: "Sustainable E-Waste",
+      description: "Industrial-scale e-waste refining platform for sustainable gold recovery. Built with modern design showcasing advanced technology, environmental responsibility, and the company's commitment to transforming electronic waste into 99.99% pure gold.",
+      tags: ["Next.js", "Modern Design", "Industry Leader"],
+      image: "/aurix-recovery.jpg",
+      url: "https://www.aurixrecovery.com/"
     }
   ];
 
   return (
     <div className="min-h-screen">
-      <section className="relative bg-forest text-fence py-32 px-4 sm:px-6 lg:px-8 overflow-hidden">
-        <div className="absolute inset-0 opacity-10">
-          <div className="absolute top-10 left-10 w-96 h-96 bg-ash rounded-full blur-3xl"></div>
-          <div className="absolute bottom-10 right-10 w-72 h-72 bg-light rounded-full blur-3xl"></div>
-        </div>
-
-        <div className="max-w-4xl mx-auto text-center relative z-10">
+      <EnhancedHero>
+        <div className="text-center">
           <motion.h1
             className="text-6xl md:text-7xl font-bold mb-6"
             initial={{ opacity: 0, y: 30 }}
@@ -79,11 +48,11 @@ export default function Portfolio() {
             Examples of the diverse web solutions we create for businesses across industries
           </motion.p>
         </div>
-      </section>
+      </EnhancedHero>
 
       <section className="py-24 px-4 sm:px-6 lg:px-8 bg-fence">
         <div className="max-w-7xl mx-auto">
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
+          <div className="grid md:grid-cols-2 gap-10 max-w-5xl mx-auto">
             {projects.map((project, index) => (
               <motion.div
                 key={index}
@@ -96,22 +65,21 @@ export default function Portfolio() {
                 whileHover={{ y: -10 }}
                 className="group cursor-pointer"
               >
-                <div className="bg-white rounded-2xl border border-light overflow-hidden shadow-xl hover:shadow-2xl transition-all">
-                  <div className="relative h-56 overflow-hidden">
-                    <motion.div
-                      className={`absolute inset-0 bg-gradient-to-br ${project.gradient}`}
-                      animate={{
-                        scale: hoveredIndex === index ? 1.1 : 1,
+                <a
+                  href={project.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block bg-white rounded-2xl border-2 border-ash/30 hover:border-forest/40 overflow-hidden shadow-xl hover:shadow-2xl transition-all"
+                >
+                  <div className="relative h-80 overflow-hidden">
+                    <img
+                      src={project.image}
+                      alt={project.title}
+                      className="w-full h-full object-cover object-top transition-transform duration-400"
+                      style={{
+                        transform: hoveredIndex === index ? 'scale(1.1)' : 'scale(1)'
                       }}
-                      transition={{ duration: 0.4 }}
-                    >
-                      <div className="absolute inset-0 opacity-20"
-                           style={{
-                             backgroundImage: `radial-gradient(circle at 2px 2px, white 1px, transparent 0)`,
-                             backgroundSize: '30px 30px'
-                           }}
-                      ></div>
-                    </motion.div>
+                    />
 
                     <motion.div
                       className="absolute inset-0 bg-forest/0 group-hover:bg-forest/20 transition-colors flex items-center justify-center"
@@ -125,21 +93,16 @@ export default function Portfolio() {
                         className="w-16 h-16 bg-fence/90 rounded-full flex items-center justify-center"
                       >
                         <svg className="w-8 h-8 text-forest" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
                         </svg>
                       </motion.div>
                     </motion.div>
                   </div>
 
                   <div className="p-8">
-                    <motion.div
-                      className="text-sm text-ash mb-2 uppercase tracking-wider font-semibold"
-                      animate={{ x: hoveredIndex === index ? 5 : 0 }}
-                      transition={{ duration: 0.3 }}
-                    >
+                    <div className="text-sm text-ash mb-2 uppercase tracking-wider font-semibold">
                       {project.category}
-                    </motion.div>
+                    </div>
                     <h3 className="text-2xl font-bold text-forest mb-3 group-hover:text-forest/80 transition-colors">
                       {project.title}
                     </h3>
@@ -155,14 +118,14 @@ export default function Portfolio() {
                           transition={{ duration: 0.3, delay: idx * 0.1 }}
                           viewport={{ once: true }}
                           whileHover={{ scale: 1.1 }}
-                          className="text-xs px-3 py-2 bg-light/50 text-forest rounded-full font-medium"
+                          className="text-sm px-4 py-2 bg-gradient-to-br from-forest/90 to-forest text-fence rounded-full font-semibold shadow-md hover:shadow-lg transition-all"
                         >
                           {tag}
                         </motion.span>
                       ))}
                     </div>
                   </div>
-                </div>
+                </a>
               </motion.div>
             ))}
           </div>
