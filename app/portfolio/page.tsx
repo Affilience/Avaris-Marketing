@@ -10,45 +10,45 @@ export default function Portfolio() {
 
   const projects = [
     {
-      title: "Modern E-Commerce Platform",
-      category: "E-Commerce",
-      description: "A sleek online store with seamless shopping experience and integrated payment solutions.",
-      tags: ["Next.js", "Stripe", "Tailwind CSS"],
+      title: "E-Commerce Platform",
+      category: "Online Retail",
+      description: "Full-featured online store with optimized checkout flow, secure payment processing, and inventory management. Built for speed and conversion with mobile-first design principles.",
+      tags: ["Next.js", "Payment Integration", "Responsive Design"],
       gradient: "from-forest via-forest/80 to-ash"
     },
     {
-      title: "Corporate Website Redesign",
+      title: "Professional Services Website",
       category: "Corporate",
-      description: "Complete brand refresh with modern design and improved user experience.",
-      tags: ["React", "CMS", "SEO Optimization"],
+      description: "Clean, modern business website with service showcases, client testimonials, and lead generation forms. Optimized for search engines and designed to build credibility.",
+      tags: ["React", "CMS", "SEO Optimized"],
       gradient: "from-ash via-light to-forest"
     },
     {
-      title: "Restaurant Booking System",
+      title: "Reservation & Booking Platform",
       category: "Hospitality",
-      description: "Custom reservation platform with real-time availability and customer management.",
+      description: "Custom booking system with real-time availability, automated confirmations, and customer management dashboard. Streamlines operations and improves guest experience.",
       tags: ["Full-Stack", "Database", "API Integration"],
       gradient: "from-light via-ash/80 to-forest"
     },
     {
-      title: "Creative Portfolio Site",
-      category: "Portfolio",
-      description: "Stunning visual showcase for a professional photographer with gallery features.",
-      tags: ["Animation", "Responsive", "Performance"],
+      title: "Visual Portfolio Website",
+      category: "Creative Professional",
+      description: "Image-focused portfolio site with smooth animations, lightbox galleries, and project case studies. Fast-loading despite rich media content.",
+      tags: ["Performance", "Animation", "Mobile Responsive"],
       gradient: "from-forest/90 via-ash to-light"
     },
     {
-      title: "SaaS Landing Page",
-      category: "Tech Startup",
-      description: "High-converting landing page with compelling messaging and clear call-to-actions.",
-      tags: ["Conversion Focused", "A/B Testing", "Analytics"],
+      title: "SaaS Product Landing Page",
+      category: "Technology",
+      description: "Conversion-optimized landing page with clear value propositions, social proof, and strategic CTAs. Integrated with analytics for continuous improvement.",
+      tags: ["Conversion Focused", "Analytics", "A/B Testing"],
       gradient: "from-ash via-forest/70 to-light"
     },
     {
-      title: "Non-Profit Organization",
+      title: "Non-Profit Organization Site",
       category: "Non-Profit",
-      description: "Mission-driven website with donation integration and volunteer management.",
-      tags: ["Accessibility", "Donation Gateway", "Content Rich"],
+      description: "Mission-driven website with donation processing, volunteer sign-up forms, and impact storytelling. Built with accessibility standards in mind.",
+      tags: ["Accessibility", "Donation Gateway", "Content Management"],
       gradient: "from-light via-forest/80 to-ash"
     }
   ];
@@ -76,7 +76,7 @@ export default function Portfolio() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
-            A showcase of our recent work and successful partnerships
+            Examples of the diverse web solutions we create for businesses across industries
           </motion.p>
         </div>
       </section>
@@ -187,7 +187,7 @@ export default function Portfolio() {
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
           >
-            Like What You See?
+            Ready to Build Your Custom Solution?
           </motion.h2>
           <motion.p
             className="text-2xl text-ash mb-10"
@@ -196,7 +196,7 @@ export default function Portfolio() {
             transition={{ duration: 0.6, delay: 0.2 }}
             viewport={{ once: true }}
           >
-            Let's create something amazing together
+            Every project is unique. Let's discuss your specific needs and create a website tailored to your business goals.
           </motion.p>
           <motion.div
             whileHover={{ scale: 1.05 }}

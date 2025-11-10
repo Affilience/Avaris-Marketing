@@ -52,7 +52,7 @@ export default function Contact() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            Let's Talk
+            Start Your Project
           </motion.h1>
           <motion.p
             className="text-2xl text-light"
@@ -60,7 +60,7 @@ export default function Contact() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
-            Ready to start your project? We'd love to hear from you
+            Tell us about your vision and we'll help you bring it to life. Free consultation and project quotes available.
           </motion.p>
         </div>
       </section>
@@ -74,10 +74,10 @@ export default function Contact() {
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
             >
-              <h2 className="text-4xl font-bold text-forest mb-6">Get In Touch</h2>
+              <h2 className="text-4xl font-bold text-forest mb-6">Let's Discuss Your Project</h2>
               <p className="text-ash text-lg mb-12 leading-relaxed">
-                Whether you have a question about our services, pricing, or anything else,
-                our team is ready to answer all your questions.
+                Have questions about pricing, timelines, or how we work? Want to discuss your specific project needs?
+                Reach out and we'll schedule a free consultation to explore how we can help achieve your goals.
               </p>
 
               <div className="space-y-6">
@@ -208,7 +208,7 @@ export default function Contact() {
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
           >
-            Business Hours
+            Quick Response Times
           </motion.h2>
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -217,12 +217,12 @@ export default function Contact() {
             viewport={{ once: true }}
           >
             <p className="text-xl text-ash mb-8 leading-relaxed">
-              Monday - Friday: 9:00 AM - 6:00 PM<br/>
-              Saturday: 10:00 AM - 4:00 PM<br/>
-              Sunday: Closed
+              We typically respond to all inquiries within 24 hours during business days.<br/>
+              For urgent matters, feel free to call us directly.
             </p>
             <p className="text-ash text-lg">
-              We typically respond to inquiries within 24 hours during business days
+              Monday - Friday: 9:00 AM - 6:00 PM EST<br/>
+              Weekend inquiries are answered first thing Monday morning
             </p>
           </motion.div>
         </div>

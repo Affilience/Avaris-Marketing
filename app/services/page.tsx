@@ -8,72 +8,72 @@ export default function Services() {
   const services = [
     {
       title: "Custom Web Design",
-      description: "Unique, visually stunning designs that reflect your brand identity and captivate your audience.",
+      description: "Visually compelling designs tailored to your brand and target audience. We create interfaces that not only look professional but guide users toward taking action, whether that's making a purchase, filling out a form, or getting in touch.",
       features: [
-        "Responsive design for all devices",
-        "User experience (UX) optimization",
-        "Brand-aligned visual identity",
-        "Interactive prototypes"
+        "Mobile-responsive design across all devices",
+        "User experience (UX) research and optimization",
+        "Brand-consistent visual identity",
+        "Interactive prototypes for early feedback"
       ],
       icon: "🎨",
       gradient: "from-forest/5 to-ash/10"
     },
     {
       title: "Web Development",
-      description: "Robust, scalable websites built with modern technologies and best practices.",
+      description: "Clean, efficient code that powers fast-loading, secure websites. We build with modern frameworks and follow industry standards to ensure your site performs reliably and scales as your business grows.",
       features: [
-        "React, Next.js, and modern frameworks",
-        "Performance optimization",
-        "SEO-friendly architecture",
-        "Secure and maintainable code"
+        "React, Next.js, and contemporary frameworks",
+        "Speed optimization for better user experience",
+        "SEO-optimized technical foundation",
+        "Secure, maintainable codebase"
       ],
       icon: "💻",
       gradient: "from-ash/5 to-light/15"
     },
     {
       title: "E-Commerce Solutions",
-      description: "Complete online store development with seamless shopping experiences.",
+      description: "Complete online store development designed to maximize conversions and streamline operations. From product catalogs to secure checkout, we build e-commerce experiences that make buying easy for your customers.",
       features: [
-        "Custom shopping cart integration",
-        "Payment gateway setup",
-        "Inventory management",
-        "Order tracking systems"
+        "Shopping cart and checkout optimization",
+        "Secure payment gateway integration",
+        "Product and inventory management tools",
+        "Order processing and tracking systems"
       ],
       icon: "🛒",
       gradient: "from-light/10 to-forest/10"
     },
     {
       title: "CMS Integration",
-      description: "Easy-to-use content management systems that put you in control of your website.",
+      description: "User-friendly content management systems that empower you to update your website independently. We provide training and documentation so you can manage your content with confidence.",
       features: [
-        "WordPress, Contentful, or custom CMS",
-        "Training and documentation",
-        "Simple content updates",
-        "Media library management"
+        "WordPress, Contentful, or headless CMS options",
+        "Comprehensive training and support",
+        "Intuitive content editing interfaces",
+        "Media organization and management"
       ],
       icon: "📝",
       gradient: "from-forest/10 to-light/10"
     },
     {
       title: "Website Maintenance",
-      description: "Ongoing support to keep your website running smoothly and securely.",
+      description: "Ongoing technical support to keep your website secure, fast, and functioning optimally. Regular maintenance prevents issues before they affect your visitors and ensures your site stays current.",
       features: [
-        "Regular updates and backups",
-        "Security monitoring",
-        "Performance optimization",
-        "Technical support"
+        "Scheduled updates and automated backups",
+        "Proactive security monitoring",
+        "Continuous performance improvements",
+        "Priority technical support when you need it"
       ],
       icon: "🔧",
       gradient: "from-ash/10 to-forest/5"
     },
     {
-      title: "Digital Strategy",
-      description: "Data-driven strategies to help your website achieve your business goals.",
+      title: "Digital Strategy & Analytics",
+      description: "Data-informed strategies that align your website with your business objectives. We help you understand your visitors, identify opportunities for improvement, and make decisions based on real user behavior.",
       features: [
-        "Analytics setup and reporting",
-        "Conversion optimization",
-        "User behavior analysis",
-        "Growth recommendations"
+        "Google Analytics configuration and tracking",
+        "Conversion rate optimization strategies",
+        "User behavior insights and recommendations",
+        "Actionable reports to guide decisions"
       ],
       icon: "📊",
       gradient: "from-light/15 to-ash/10"

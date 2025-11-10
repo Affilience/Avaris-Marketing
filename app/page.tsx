@@ -62,14 +62,14 @@ export default function Home() {
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.8, ease: "easeOut" }}
               >
-                Crafting Digital
+                Transform Your Brand with
                 <motion.span
                   className="block text-ash mt-4 bg-clip-text text-transparent bg-gradient-to-r from-ash to-light"
                   initial={{ opacity: 0, x: -50 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.8, delay: 0.3 }}
                 >
-                  Experiences
+                  Strategic Web Design
                 </motion.span>
               </motion.h1>
             </motion.div>
@@ -78,7 +78,7 @@ export default function Home() {
               variants={fadeInUp}
               className="text-xl md:text-2xl text-light max-w-3xl mx-auto mb-12 leading-relaxed"
             >
-              We design and build stunning websites that elevate your brand and engage your audience
+              Professional web design and development agency specializing in custom websites that drive measurable results. We combine stunning aesthetics with conversion-focused strategies to grow your business online.
             </motion.p>
 
             <motion.div
@@ -126,26 +126,26 @@ export default function Home() {
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
             >
-              What We Do
+              Comprehensive Digital Solutions
             </motion.h2>
 
             <div className="grid md:grid-cols-3 gap-8">
               {[
                 {
-                  title: "Web Design",
-                  description: "Beautiful, intuitive designs that capture your brand essence and create lasting impressions",
+                  title: "Custom Web Design",
+                  description: "Professional UI/UX design that elevates your brand identity and creates memorable user experiences. We craft pixel-perfect interfaces that resonate with your target audience and drive engagement across all devices.",
                   icon: "🎨",
                   gradient: "from-forest/10 to-ash/10"
                 },
                 {
-                  title: "Development",
-                  description: "Modern, responsive websites built with cutting-edge technologies for optimal performance",
+                  title: "Web Development",
+                  description: "High-performance websites built with React, Next.js, and modern technologies. Our developers create scalable, SEO-optimized solutions with lightning-fast load times and seamless functionality.",
                   icon: "⚡",
                   gradient: "from-ash/10 to-light/20"
                 },
                 {
-                  title: "Strategy",
-                  description: "Data-driven solutions tailored to meet your business goals and exceed expectations",
+                  title: "Digital Strategy",
+                  description: "Data-driven marketing strategies that convert visitors into customers. We analyze user behavior, optimize conversion funnels, and implement proven tactics to maximize your ROI and achieve sustainable growth.",
                   icon: "📊",
                   gradient: "from-light/10 to-forest/10"
                 }
@@ -198,7 +198,7 @@ export default function Home() {
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
             >
-              Ready to Transform Your Digital Presence?
+              Ready to Accelerate Your Business Growth?
             </motion.h2>
             <motion.p
               className="text-2xl text-ash mb-10"
@@ -207,7 +207,7 @@ export default function Home() {
               transition={{ duration: 0.6, delay: 0.2 }}
               viewport={{ once: true }}
             >
-              Let's collaborate to bring your vision to life
+              Partner with Avaris Marketing to create a high-converting website that amplifies your brand and drives revenue. Let's turn your digital vision into measurable business results.
             </motion.p>
             <motion.div
               whileHover={{ scale: 1.05 }}

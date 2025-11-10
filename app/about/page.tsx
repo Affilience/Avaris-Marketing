@@ -47,7 +47,7 @@ export default function About() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
-            Passionate designers and developers dedicated to bringing your vision to life
+            A dedicated team of designers and developers partnering with businesses to create impactful digital experiences
           </motion.p>
         </div>
       </section>
@@ -65,9 +65,9 @@ export default function About() {
           </motion.h2>
           <div className="space-y-8 text-xl text-ash leading-relaxed">
             {[
-              "We started with a simple belief: every business deserves a website that not only looks beautiful but performs exceptionally. What began as a small team of passionate designers and developers has grown into a full-service digital agency trusted by clients across industries.",
-              "Our approach combines strategic thinking with creative excellence. We don't just build websites—we craft digital experiences that connect with your audience and drive real results for your business.",
-              "Every project we take on is an opportunity to push boundaries, explore new possibilities, and deliver something truly remarkable. We're not satisfied with good enough; we strive for exceptional."
+              "At Avaris Marketing, we believe every business deserves a website that not only looks beautiful but performs exceptionally. We're a team of dedicated designers and developers who understand that your website is often the first impression potential customers have of your brand.",
+              "Our approach combines strategic thinking with creative execution. We don't just build websites—we craft digital experiences that connect with your target audience and drive measurable results. From the initial discovery phase through launch and beyond, we're invested in your success.",
+              "Every project is an opportunity to solve unique challenges and create solutions tailored to your specific business goals. We focus on understanding your industry, your customers, and your competitive landscape to deliver websites that truly make an impact."
             ].map((text, index) => (
               <motion.p
                 key={index}
@@ -107,23 +107,23 @@ export default function About() {
           <div className="grid md:grid-cols-2 gap-8">
             {[
               {
-                title: "Excellence",
-                description: "We hold ourselves to the highest standards in everything we do, from initial concept to final delivery.",
+                title: "Quality Craftsmanship",
+                description: "We take pride in delivering clean code, thoughtful design, and attention to detail. Every pixel, every interaction, and every line of code is crafted with care to ensure your website performs flawlessly.",
                 icon: "✨"
               },
               {
-                title: "Collaboration",
-                description: "Your success is our success. We work closely with you as partners throughout the entire process.",
+                title: "True Partnership",
+                description: "Your success is our success. We work as an extension of your team, maintaining open communication and involving you in key decisions throughout the entire development process.",
                 icon: "🤝"
               },
               {
-                title: "Innovation",
-                description: "We stay ahead of industry trends and continuously explore new technologies to deliver cutting-edge solutions.",
+                title: "Modern Solutions",
+                description: "We leverage current technologies and best practices to build fast, secure, and scalable websites. Our commitment to continuous learning ensures your site is built with the tools that matter.",
                 icon: "💡"
               },
               {
-                title: "Transparency",
-                description: "Clear communication, honest timelines, and straightforward pricing—no surprises, just great work.",
+                title: "Honest Communication",
+                description: "Clear timelines, realistic expectations, and straightforward pricing. We believe in transparency at every stage—you'll always know where your project stands and what to expect next.",
                 icon: "🔍"
               }
             ].map((value, index) => (

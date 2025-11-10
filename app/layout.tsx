@@ -14,8 +14,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Avaris Marketing | Creative Digital Solutions",
-  description: "Transform your digital presence with Avaris Marketing's expert web design and development services. Custom websites that captivate and convert.",
+  title: "Avaris Marketing | Professional Web Design & Development Agency",
+  description: "Transform your business with Avaris Marketing's expert web design and development services. We create high-converting, SEO-optimized websites that drive measurable ROI. Custom solutions for ambitious brands.",
 };
 
 export default function RootLayout({
