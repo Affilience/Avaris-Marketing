@@ -2,9 +2,12 @@
 
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
+import { motion } from 'framer-motion';
+import { useState } from 'react';
 
 export default function Navigation() {
   const pathname = usePathname();
+  const [hoveredLink, setHoveredLink] = useState<string | null>(null);
 
   const links = [
     { href: '/', label: 'Home' },
@@ -15,25 +18,51 @@ export default function Navigation() {
   ];
 
   return (
-    <nav className="bg-forest text-fence sticky top-0 z-50 border-b border-ash/20">
+    <motion.nav
+      className="bg-forest/95 backdrop-blur-md text-fence sticky top-0 z-50 border-b border-ash/20 shadow-lg"
+      initial={{ y: -100 }}
+      animate={{ y: 0 }}
+      transition={{ duration: 0.5, ease: "easeOut" }}
+    >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
-          <Link href="/" className="text-xl font-bold tracking-tight hover:text-light transition-colors">
-            Your Agency
-          </Link>
+          <motion.div
+            whileHover={{ scale: 1.05 }}
+            transition={{ type: "spring", stiffness: 400 }}
+          >
+            <Link href="/" className="text-xl font-bold tracking-tight hover:text-light transition-colors">
+              Avaris Marketing
+            </Link>
+          </motion.div>
 
-          <div className="hidden md:flex space-x-8">
+          <div className="hidden md:flex space-x-1">
             {links.map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
-                className={`transition-colors ${
+                className="relative px-4 py-2"
+                onMouseEnter={() => setHoveredLink(link.href)}
+                onMouseLeave={() => setHoveredLink(null)}
+              >
+                <span className={`relative z-10 transition-colors ${
                   pathname === link.href
                     ? 'text-fence font-medium'
                     : 'text-ash hover:text-fence'
-                }`}
-              >
-                {link.label}
+                }`}>
+                  {link.label}
+                </span>
+                {(hoveredLink === link.href || pathname === link.href) && (
+                  <motion.div
+                    layoutId={hoveredLink === link.href ? "hover" : "active"}
+                    className={`absolute inset-0 rounded-md ${
+                      pathname === link.href ? 'bg-fence/10' : 'bg-ash/10'
+                    }`}
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    exit={{ opacity: 0 }}
+                    transition={{ duration: 0.2 }}
+                  />
+                )}
               </Link>
             ))}
           </div>
@@ -45,6 +74,6 @@ export default function Navigation() {
           </button>
         </div>
       </div>
-    </nav>
+    </motion.nav>
   );
 }
